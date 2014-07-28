@@ -6,7 +6,7 @@ has_one :crz_document_detail
 
 def to_indexable
     {
-        customer: details.customer,
+        customer: crz_document_detail.customer,
         content: attachments.first.pages.map(&:text).join(' ')
     }
 end
